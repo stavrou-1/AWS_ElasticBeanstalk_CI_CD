@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Test description service linked role"
+Resources: 
+  BasicSLR:
+    Type: "AWS::IAM::ServiceLinkedRole"
+    Properties:
+      AWSServiceName: "codedeploy.amazonaws.com"
+      Description: "Test SLR description"
+      CustomSuffix: "TestSuffix"
+  RolePolicies: 
+    Type: "AWS::IAM::Policy"
+    Properties: 
+      PolicyName: "root"
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Action: "*"
+            Resource: "*"
+      Roles: 
+        - 
+          Ref: "BasicSLR"
+Outputs:
+  SLRId:
+    Value: !Ref BasicSLR

@@ -1,0 +1,22 @@
+{ 
+              "Description": "SLR resource create test - Auto Scaling",
+              "Resources": {
+                "BasicSLR": {
+                  "Type": "AWS::IAM::ServiceLinkedRole",
+                  "Properties": {
+                     "AWSServiceName": "autoscaling.amazonaws.com",
+                     "Description": "Test SLR description",
+                     "CustomSuffix":
+                     "TestSuffix"
+                     }
+                    }
+                   },
+                   "Outputs": {
+                     "SLRId": {
+                       "Value": {
+                       "Ref": "BasicSLR"
+                    }
+                   }
+                  }
+                }
+         

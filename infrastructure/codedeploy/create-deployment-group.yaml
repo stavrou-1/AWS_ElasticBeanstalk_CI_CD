@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  AppDeploymentGroup:
+    Type: AWS::CodeDeploy::DeploymentGroup
+    Properties:
+      ApplicationName: codedeployWizard-CodeDeployApplication-EW2SNYE2H5N1
+      # DeploymentStyle:
+        # DeploymentOption: WITH_TRAFFIC_CONTROL
+      # LoadBalancerInfo:
+      #   TargetGroupInfoList:
+      #     - Name: !GetAtt MyTargetGroup.TargetGroupName
+      ServiceRoleArn: 'arn:aws:iam::793076479549:role/poopyCodeDeployAccessRole-RootRole-NOSOC4LU6E27'

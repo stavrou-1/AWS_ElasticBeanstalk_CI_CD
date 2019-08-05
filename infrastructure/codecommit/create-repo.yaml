@@ -1,0 +1,6 @@
+Resources:
+  CodeCommitRepository:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: MyPoopyRepo1
+      RepositoryDescription: a description
