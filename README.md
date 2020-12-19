@@ -84,3 +84,6 @@ Choose Next. Accept the defaults on the following page, and then choose Next.
 In Capabilities, select I acknowledge that AWS CloudFormation might create IAM resources, and then choose Create.
 
 After your stack creation is complete, view the event list to check for any errors.
+
+
+## Added the end of the README.md file. 
